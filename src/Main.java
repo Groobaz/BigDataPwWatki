@@ -8,5 +8,7 @@ public class Main {
     }
 }
 
-class Filozof
+class Filozof extends Thread{
+
+}
 
