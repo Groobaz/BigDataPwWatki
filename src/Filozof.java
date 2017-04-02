@@ -1,33 +1,3 @@
-/**
- * Created by mrudzki on 02.04.17.
- */
-class Filozof extends Thread{
-
-    private static int z=1;
-    private int nr;
-    private Stol stolik;
-
-    public Filozof(Stol s) {
-        nr = z;
-        z++;
-        stolik = s;
-    }
-
-    public void run() {
-        try {
-            for(;;) {
-                sleep(2000);
-                if (stolik.wezPaleczke(nr)) {
-                    sleep(1000+(int)(Math.random()*5000));
-                    stolik.polozPaleczke(nr);
-                }
-            }
-        }
-        catch (InterruptedException e) { }
-    }
-
-}
-
 class Stol {
 
     private Posilek fil;
